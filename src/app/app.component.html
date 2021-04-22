@@ -1,0 +1,22 @@
+<h2>{{title}}</h2>
+
+<p>Next player: {{playerColour}}</p>
+<p>Winner: Player {{winner}}</p>
+<section>
+  <button class="square" (click)="userClick(0)" id="0"></button>
+  <button class="square" (click)="userClick(1)" id="1"></button>
+  <button class="square" (click)="userClick(2)" id="2"></button>
+  <div></div>
+  <button class="square" (click)="userClick(3)" id="3"></button>
+  <button class="square" (click)="userClick(4)" id="4"></button>
+  <button class="square" (click)="userClick(5)" id="5"></button>
+  <div></div>
+  <button class="square" (click)="userClick(6)" id="6"></button>
+  <button class="square" (click)="userClick(7)" id="7"></button>
+  <button class="square" (click)="userClick(8)" id="8"></button>
+</section>
+
+<div *ngIf="gameEnd">
+  <p>Player {{winner}} won: Restart Game to play again</p>
+  <button (click)="resetGame()">Restart Game</button>
+</div>
